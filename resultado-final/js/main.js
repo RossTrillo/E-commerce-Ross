@@ -172,13 +172,16 @@ const productos =[
     }
 ];
 
+//Elementos de DOM
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal")
 
-
+//Función
 function cargarProductos(productosElegidos) {
+    //Limpia el espacio a renderizar 
     contenedorProductos.innerHTML = "";
+    //Itera en el array y renderiza uno a uno 
     productosElegidos.forEach(producto => {
         const div = document.createElement("div");
         div.classList.add("producto");
@@ -190,18 +193,19 @@ function cargarProductos(productosElegidos) {
                 <button class="producto-agregar" id="${producto.id}">Agregar</button>
             </div>
         `;
-
         contenedorProductos.append(div);
     } )
 }
-
+//Son creados en la interfaz
 cargarProductos(productos);
 
+//Se agregan addEventListener para cada boton 
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
+        //Se elimina el estado activo
         botonesCategorias.forEach(boton =>boton.classList.remove("active"));
         e.currentTarget.classList.add("active");
-
+        //Si es diferente a todos, se filtran los que coincidan con el id
         if(e.currentTarget.id != "todos") {
             const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
             tituloPrincipal.innerText = productoCategoria.categoria.nombre;
@@ -209,6 +213,7 @@ botonesCategorias.forEach(boton => {
 
         const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
         cargarProductos(productosBoton);
+        //Si es todos, se cambia el titulo, se cargan todos los productos
         } else {
             tituloPrincipal.innerText = "Todos los productos";
             cargarProductos(productos);
