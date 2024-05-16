@@ -1,31 +1,185 @@
-let productos = [];
+const productos =[
+    {
+        "id": "calzado-01",
+        "titulo": "Calzado 01",
+        "imagen": "https://http2.mlstatic.com/zapatos-p-mujer-taconesplataformas-negros-D_NQ_NP_754454-MLM25948778359_092017-F.jpg",
+        "categoria": {
+            "nombre": "Calzados",
+            "id": "calzados"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "calzado-02",
+        "titulo": "Calzado 02",
+        "imagen": "https://th.bing.com/th/id/R.28acea38e45221db5b5b8669fad474dc?rik=0sGJh59aKVpTZQ&pid=ImgRaw&r=0",
+        "categoria": {
+            "nombre": "Calzados",
+            "id": "calzados"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "calzado-03",
+        "titulo": "Calzado 03",
+        "imagen": "https://th.bing.com/th/id/R.7bb772cec3249163448974e98c4f5a37?rik=Kdm%2bnElKDXg1hw&pid=ImgRaw&r=0",
+        "categoria": {
+            "nombre": "Calzados",
+            "id": "calzados"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "calzado-04",
+        "titulo": "Calzado 04",
+        "imagen": "https://http2.mlstatic.com/calzado-dama-mujer-zapatilla-casualformal-charol-negr-comod-D_NQ_NP_850045-MLM29525640871_022019-F.jpg",
+        "categoria": {
+            "nombre": "Calzados",
+            "id": "calzados"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "calzado-05",
+        "titulo": "Calzado 05",
+        "imagen": "https://resources.claroshop.com/medios-plazavip/fotos/productos_sears1/original/2978111.jpg",
+        "categoria": {
+            "nombre": "Calzadoss",
+            "id": "calzados"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "anteojos-01",
+        "titulo": "Anteojos 01",
+        "imagen": "https://th.bing.com/th/id/OIF.SnQzPYM8aWro78jTs0aHqA?rs=1&pid=ImgDetMain",
+        "categoria": {
+            "nombre": "Anteojos",
+            "id": "anteojos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "anteojos-02",
+        "titulo": "Anteojos 02",
+        "imagen": "https://th.bing.com/th?id=OIF.fuvg4IEISDjeC%2fLbrpOtYw&rs=1&pid=ImgDetMain",
+        "categoria": {
+            "nombre": "Anteojos",
+            "id": "anteojos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "anteojos-03",
+        "titulo": "Anteojos 03",
+        "imagen": "https://th.bing.com/th/id/OIF.RrtL7SfQo4i0XG4UpVMUcA?rs=1&pid=ImgDetMain",
+        "categoria": {
+            "nombre": "Anteojos",
+            "id": "anteojos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "anteojos-04",
+        "titulo": "Anteojos 04",
+        "imagen": "https://th.bing.com/th?id=OIF.zPvkphX2xl%2bT5SgKZQG1fw&rs=1&pid=ImgDetMain",
+        "categoria": {
+            "nombre": "Anteojos",
+            "id": "anteojos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "anteojos-05",
+        "titulo": "Anteojos 05",
+        "imagen": "https://th.bing.com/th/id/OIF.Xjke9BSsIt0RqCwp4vqwNA?rs=1&pid=ImgDetMain",
+        "categoria": {
+            "nombre": "Anteojos",
+            "id": "anteojos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "anteojos-06",
+        "titulo": "Anteojos 06",
+        "imagen": "https://th.bing.com/th?id=OIF.EP6qoR68QoCMkXI1%2bz3EpQ&rs=1&pid=ImgDetMain",
+        "categoria": {
+            "nombre": "Anteojos",
+            "id": "anteojos"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "anteojos-07",
+        "titulo": "Anteojos 07",
+        "imagen": "https://th.bing.com/th/id/OIF.LCcRAgAeMdgyF3zAvT1zkQ?rs=1&pid=ImgDetMain",
+        "categoria": {
+            "nombre": "Anteojos",
+            "id": "anteojos"
+        },
+        "precio": 1000
+    },
 
-fetch("./js/productos.json")
-    .then(response => response.json())
-    .then(data => {
-        productos = data;
-        cargarProductos(productos);
-    })
-
+    {
+        "id": "cartera-01",
+        "titulo": "Cartera 01",
+        "imagen": "https://www.losroblespolotime.com/wp-content/uploads/2016/11/1146-77.jpg",
+        "categoria": {
+            "nombre": "Carteras",
+            "id": "carteras"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "cartera-02",
+        "titulo": "Cartera 02",
+        "imagen": "https://images-na.ssl-images-amazon.com/images/I/61Bo9BAxIVL._UX679_.jpg",
+        "categoria": {
+            "nombre": "Carteras",
+            "id": "carteras"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "cartera-03",
+        "titulo": "Cartera 03",
+        "imagen": "https://th.bing.com/th/id/OIP.HTT2Q2vLiXnG3HQmnZNCpgHaHa?rs=1&pid=ImgDetMain",
+        "categoria": {
+            "nombre": "Carteras",
+            "id": "carteras"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "cartera-04",
+        "titulo": "Cartera 04",
+        "imagen": "https://th.bing.com/th/id/R.72a6646861fa663dd17eab7f142dc7ea?rik=kgHVar2eFqYnAg&pid=ImgRaw&r=0",
+        "categoria": {
+            "nombre": "Carteras",
+            "id": "carteras"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "cartera-05",
+        "titulo": "Cartera 05",
+        "imagen": "https://th.bing.com/th/id/OIP.5RQHeZ-DTmR5hskQdAyrBgHaHa?rs=1&pid=ImgDetMain",
+        "categoria": {
+            "nombre": "Carteras",
+            "id": "carteras"
+        },
+        "precio": 1000
+    }
+];
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
-const tituloPrincipal = document.querySelector("#titulo-principal");
-let botonesAgregar = document.querySelectorAll(".producto-agregar");
-const numerito = document.querySelector("#numerito");
-
-
-botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
-    aside.classList.remove("aside-visible");
-}))
+const tituloPrincipal = document.querySelector("#titulo-principal")
 
 
 function cargarProductos(productosElegidos) {
-
     contenedorProductos.innerHTML = "";
-
     productosElegidos.forEach(producto => {
-
         const div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML = `
@@ -38,89 +192,27 @@ function cargarProductos(productosElegidos) {
         `;
 
         contenedorProductos.append(div);
-    })
-
-    actualizarBotonesAgregar();
+    } )
 }
 
+cargarProductos(productos);
 
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
-
-        botonesCategorias.forEach(boton => boton.classList.remove("active"));
+        botonesCategorias.forEach(boton =>boton.classList.remove("active"));
         e.currentTarget.classList.add("active");
 
-        if (e.currentTarget.id != "todos") {
+        if(e.currentTarget.id != "todos") {
             const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
             tituloPrincipal.innerText = productoCategoria.categoria.nombre;
-            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
-            cargarProductos(productosBoton);
+
+
+        const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+        cargarProductos(productosBoton);
         } else {
             tituloPrincipal.innerText = "Todos los productos";
             cargarProductos(productos);
         }
-
     })
-});
+})
 
-function actualizarBotonesAgregar() {
-    botonesAgregar = document.querySelectorAll(".producto-agregar");
-
-    botonesAgregar.forEach(boton => {
-        boton.addEventListener("click", agregarAlCarrito);
-    });
-}
-
-let productosEnCarrito;
-
-let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
-
-if (productosEnCarritoLS) {
-    productosEnCarrito = JSON.parse(productosEnCarritoLS);
-    actualizarNumerito();
-} else {
-    productosEnCarrito = [];
-}
-
-function agregarAlCarrito(e) {
-
-    Toastify({
-        text: "Producto agregado",
-        duration: 3000,
-        close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-          background: "linear-gradient(to right, #4b33a8, #785ce9)",
-          borderRadius: "2rem",
-          textTransform: "uppercase",
-          fontSize: ".75rem"
-        },
-        offset: {
-            x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-            y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
-          },
-        onClick: function(){} // Callback after click
-      }).showToast();
-
-    const idBoton = e.currentTarget.id;
-    const productoAgregado = productos.find(producto => producto.id === idBoton);
-
-    if(productosEnCarrito.some(producto => producto.id === idBoton)) {
-        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
-        productosEnCarrito[index].cantidad++;
-    } else {
-        productoAgregado.cantidad = 1;
-        productosEnCarrito.push(productoAgregado);
-    }
-
-    actualizarNumerito();
-
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-}
-
-function actualizarNumerito() {
-    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
-    numerito.innerText = nuevoNumerito;
-}

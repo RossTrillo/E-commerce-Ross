@@ -1,4 +1,4 @@
-let productosEnCarrito = localStorage.getItem("productos-en-carrito");
+/* let productosEnCarrito = localStorage.getItem("productos-en-carrito");
 productosEnCarrito = JSON.parse(productosEnCarrito);
 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
@@ -140,3 +140,4 @@ function comprarCarrito() {
     contenedorCarritoComprado.classList.remove("disabled");
 
 }
+*/
